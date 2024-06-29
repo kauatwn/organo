@@ -1,15 +1,32 @@
+import { ChangeEvent } from "react";
 import "./TextField.css";
 
-interface TextFieldProps {
+interface ITextFieldProps {
   label: string;
   placeholder: string;
 }
 
-function TextField(props: TextFieldProps) {
+interface ITextFieldProps {
+  label: string;
+  placeholder: string;
+  value: string;
+  setValue: (value: string) => void;
+}
+
+function TextField({ label, placeholder, value, setValue }: ITextFieldProps) {
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setValue(e.target.value);
+  };
+
   return (
     <div className="text-field">
-      <label htmlFor="">{props.label}</label>
-      <input type="text" placeholder={props.placeholder} />
+      <label htmlFor="">{label}</label>
+      <input
+        type="text"
+        value={value}
+        onChange={handleInputChange}
+        placeholder={placeholder}
+      />
     </div>
   );
 }

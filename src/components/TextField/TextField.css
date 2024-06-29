@@ -18,9 +18,13 @@
   background: #fff;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
   border: none;
-  color: #a4a4a4;
+  color: #212121;
   font-family: "Montserrat";
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+}
+
+.text-field input::placeholder {
+  color: #afafaf;
 }
