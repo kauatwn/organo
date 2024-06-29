@@ -1,0 +1,32 @@
+.dropdown-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dropdown-field label {
+  color: #212121;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.dropdown-field select {
+  width: 100%;
+  padding: 30px 12px;
+  background: #fff;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+  border: none;
+  color: #212121;
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("../../assets/images/arrow-dropdown.svg");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 24px) center;
+}
