@@ -1,7 +1,13 @@
-import Banner from "./components/Banner/Banner";
+import Banner from "./components/Banner";
+import FormField from "./components/FormField";
 
 function App() {
-  return <Banner />;
+  return (
+    <div>
+      <Banner />
+      <FormField />
+    </div>
+  );
 }
 
 export default App;
