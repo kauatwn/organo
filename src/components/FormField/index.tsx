@@ -3,7 +3,7 @@ import "./FormField.css";
 
 function FormField() {
   return (
-    <section className="form-area">
+    <section className="form-field">
       <h2>Preencha os dados para criar o card do colaborador</h2>
       <CardForm />
     </section>

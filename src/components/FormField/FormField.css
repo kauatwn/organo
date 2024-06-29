@@ -1,11 +1,11 @@
-.form-area {
+.form-field {
   display: flex;
   flex-direction: column;
   gap: 44px;
   padding: 80px 160px;
 }
 
-.form-area h2 {
+.form-field h2 {
   text-align: center;
   color: #212121;
   font-family: "Prata";
