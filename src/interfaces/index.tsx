@@ -1,3 +1,4 @@
 import ICollaborator from "./ICollaborator";
+import ITeam from "./ITeam";
 
-export type { ICollaborator };
+export type { ICollaborator, ITeam };
