@@ -16,13 +16,13 @@ function CardForm({ teamList, onCollaboratorSubmit }: ICardFormProps) {
   const [position, setPosition] = useState<string>("");
   const [team, setTeam] = useState<string>("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleCardFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     onCollaboratorSubmit({ name, image, position, team });
   };
 
   return (
-    <form className="card-form" onSubmit={handleSubmit}>
+    <form className="card-form" onSubmit={handleCardFormSubmit}>
       <TextField
         label="Nome"
         placeholder="Digite seu nome"
