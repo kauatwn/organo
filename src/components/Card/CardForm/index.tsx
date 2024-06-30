@@ -3,14 +3,22 @@ import TextField from "../../TextField";
 import DropdownField from "../../DropdownField";
 import Button from "../../Button";
 import { useState } from "react";
+import { ICollaborator } from "../../../interfaces";
 
-function CardForm() {
+interface ICardFormProps {
+  teamList: string[];
+  onCollaboratorSubmit: (formData: ICollaborator) => void;
+}
+
+function CardForm({ teamList, onCollaboratorSubmit }: ICardFormProps) {
   const [name, setName] = useState<string>("");
   const [image, setImage] = useState<string>("");
   const [position, setPosition] = useState<string>("");
+  const [team, setTeam] = useState<string>("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    onCollaboratorSubmit({ name, image, position, team });
   };
 
   return (
@@ -18,22 +26,27 @@ function CardForm() {
       <TextField
         label="Nome"
         placeholder="Digite seu nome"
-        value={name}
+        selectedValue={name}
         setValue={(value) => setName(value)}
       />
       <TextField
         label="Cargo"
         placeholder="Digite seu cargo"
-        value={position}
+        selectedValue={position}
         setValue={(value) => setPosition(value)}
       />
       <TextField
         label="Imagem"
         placeholder="Digite o endereço da imagem"
-        value={image}
+        selectedValue={image}
         setValue={(value) => setImage(value)}
       />
-      <DropdownField label="Time" items={["Programação"]} />
+      <DropdownField
+        label="Time"
+        itemList={teamList}
+        selectedValue={team}
+        setValue={(value) => setTeam(value)}
+      />
       <Button text="Criar card" />
     </form>
   );
