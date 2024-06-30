@@ -4,11 +4,6 @@ import "./TextField.css";
 interface ITextFieldProps {
   label: string;
   placeholder: string;
-}
-
-interface ITextFieldProps {
-  label: string;
-  placeholder: string;
   value: string;
   setValue: (value: string) => void;
 }
