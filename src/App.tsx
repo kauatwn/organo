@@ -1,12 +1,14 @@
 import Banner from "./components/Banner";
 import FormField from "./components/FormField";
+import TeamField from "./components/TeamField";
 
 function App() {
   return (
-    <div>
+    <>
       <Banner />
       <FormField />
-    </div>
+      <TeamField />
+    </>
   );
 }
 
