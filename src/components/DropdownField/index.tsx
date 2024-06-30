@@ -4,11 +4,16 @@ import "./DropdownField.css";
 interface DropdownFieldProps {
   label: string;
   items: string[];
-  value: string;
+  selectedValue: string;
   setValue: (value: string) => void;
 }
 
-function DropdownField({ label, items, value, setValue }: DropdownFieldProps) {
+function DropdownField({
+  label,
+  items,
+  selectedValue,
+  setValue,
+}: DropdownFieldProps) {
   const handleSelectChange = (e: ChangeEvent<HTMLSelectElement>) => {
     setValue(e.target.value);
   };
@@ -16,7 +21,7 @@ function DropdownField({ label, items, value, setValue }: DropdownFieldProps) {
   return (
     <div className="dropdown-field">
       <label htmlFor="">{label}</label>
-      <select name="" id="" value={value} onChange={handleSelectChange}>
+      <select name="" id="" value={selectedValue} onChange={handleSelectChange}>
         {items.map((item) => {
           return <option key={item}>{item}</option>;
         })}
