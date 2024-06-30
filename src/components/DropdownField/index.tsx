@@ -3,14 +3,14 @@ import "./DropdownField.css";
 
 interface DropdownFieldProps {
   label: string;
-  items: string[];
+  itemList: string[];
   selectedValue: string;
   setValue: (value: string) => void;
 }
 
 function DropdownField({
   label,
-  items,
+  itemList,
   selectedValue,
   setValue,
 }: DropdownFieldProps) {
@@ -22,7 +22,7 @@ function DropdownField({
     <div className="dropdown-field">
       <label htmlFor="">{label}</label>
       <select name="" id="" value={selectedValue} onChange={handleSelectChange}>
-        {items.map((item) => {
+        {itemList.map((item) => {
           return <option key={item}>{item}</option>;
         })}
       </select>
