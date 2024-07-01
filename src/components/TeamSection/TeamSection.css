@@ -1,16 +1,18 @@
-.team-field {
+.team-section {
   display: flex;
   flex-direction: column;
+  gap: 38px;
+  padding: 36px 0;
 }
 
-.team-title {
+.team-section-title {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
 }
 
-.team-field h3 {
+.team-section h3 {
   font-family: "Prata";
   font-weight: 400;
   font-size: 32px;
@@ -22,4 +24,11 @@ hr {
   border: none;
   width: 32px;
   height: 4px;
+}
+
+.team-section-card-list {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  justify-content: center;
 }
