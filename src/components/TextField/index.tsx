@@ -6,6 +6,7 @@ interface ITextFieldProps {
   placeholder: string;
   selectedValue: string;
   setValue: (value: string) => void;
+  isRequired?: boolean;
 }
 
 function TextField({
@@ -13,6 +14,7 @@ function TextField({
   placeholder,
   selectedValue,
   setValue,
+  isRequired = false,
 }: ITextFieldProps) {
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
@@ -26,6 +28,7 @@ function TextField({
         value={selectedValue}
         onChange={handleInputChange}
         placeholder={placeholder}
+        required={isRequired}
       />
     </div>
   );

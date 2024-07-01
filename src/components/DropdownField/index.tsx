@@ -1,19 +1,21 @@
 import { ChangeEvent } from "react";
 import "./DropdownField.css";
 
-interface DropdownFieldProps {
+interface IDropdownFieldProps {
   label: string;
-  itemList: string[];
+  items: string[];
   selectedValue: string;
   setValue: (value: string) => void;
+  isRequired?: boolean;
 }
 
 function DropdownField({
   label,
-  itemList,
+  items,
   selectedValue,
   setValue,
-}: DropdownFieldProps) {
+  isRequired = false,
+}: IDropdownFieldProps) {
   const handleSelectChange = (e: ChangeEvent<HTMLSelectElement>) => {
     setValue(e.target.value);
   };
@@ -21,8 +23,15 @@ function DropdownField({
   return (
     <div className="dropdown-field">
       <label htmlFor="">{label}</label>
-      <select name="" id="" value={selectedValue} onChange={handleSelectChange}>
-        {itemList.map((item) => {
+      <select
+        name=""
+        id=""
+        value={selectedValue}
+        onChange={handleSelectChange}
+        required={isRequired}
+      >
+        <option value="">Selecione uma opção</option>
+        {items.map((item) => {
           return <option key={item}>{item}</option>;
         })}
       </select>
