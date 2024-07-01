@@ -29,6 +29,8 @@ hr {
 .team-section-card-list {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 24px;
+  padding: 0 160px;
   justify-content: center;
 }
