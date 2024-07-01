@@ -1,5 +1,5 @@
 interface ITeam {
-  title: string;
+  name: string;
   primaryColor: string;
   secondaryColor: string;
 }

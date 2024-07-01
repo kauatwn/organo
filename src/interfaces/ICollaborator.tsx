@@ -1,7 +1,7 @@
 interface ICollaborator {
   name: string;
-  image: string;
   position: string;
+  image?: string;
   team: string;
 }
 
