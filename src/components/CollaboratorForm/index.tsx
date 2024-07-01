@@ -44,7 +44,7 @@ function CollaboratorForm({
         />
         <TextField
           label="Imagem"
-          placeholder="Digite o endereço da imagem"
+          placeholder="Digite o link HTTP da imagem (opcional)"
           selectedValue={image}
           setValue={(value) => setImage(value)}
         />
