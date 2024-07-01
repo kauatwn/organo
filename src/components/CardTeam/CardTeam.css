@@ -1,0 +1,51 @@
+.card-team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 262px;
+  height: 272px;
+  padding: 12px;
+  gap: 18px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  position: relative;
+}
+
+.card-team-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-team-photo img {
+  width: 100%;
+  height: auto;
+}
+
+.card-team-info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
+
+.card-team-info h4 {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #6278f7;
+}
+
+.card-team-info h5 {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #212121;
+}
