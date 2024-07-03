@@ -1,13 +1,13 @@
 import "./CardTeam.css";
 
-interface CardTeamProps {
+interface ICardTeamProps {
   name: string;
   position: string;
   image?: string;
   primaryColor: string;
 }
 
-function CardTeam({ name, position, image, primaryColor }: CardTeamProps) {
+function CardTeam({ name, position, image, primaryColor }: ICardTeamProps) {
   return (
     <div
       className="card-team"
@@ -16,7 +16,7 @@ function CardTeam({ name, position, image, primaryColor }: CardTeamProps) {
       }}
     >
       <div className="card-team-photo">
-        <img src={image} alt={image} />
+        <img src={image} alt={`Foto de perfil de ${name}`} />
       </div>
       <div className="card-team-info">
         <h4>{name}</h4>
