@@ -1,11 +1,11 @@
-import "./CollaboratorForm.css";
+import S from "./CollaboratorForm.module.css";
 import { useState } from "react";
 import TextField from "../TextField";
 import DropdownField from "../DropdownField";
 import Button from "../Button";
 import { useCollaboratorContext } from "../../hooks";
 
-function CollaboratorForm() {
+export default function CollaboratorForm() {
   const { teams, onCollaboratorSubmit } = useCollaboratorContext();
   const [name, setName] = useState<string>("");
   const [image, setImage] = useState<string>("");
@@ -18,9 +18,12 @@ function CollaboratorForm() {
   };
 
   return (
-    <section className="collaborator-form-section">
+    <section className={S["collaborator-form-section"]}>
       <h2>Preencha os dados para criar o card do colaborador</h2>
-      <form className="collaborator-form" onSubmit={handleCollaboratorSubmit}>
+      <form
+        className={S["collaborator-form"]}
+        onSubmit={handleCollaboratorSubmit}
+      >
         <TextField
           label="Nome"
           placeholder="Digite seu nome"
@@ -48,10 +51,8 @@ function CollaboratorForm() {
           setValue={(value) => setTeam(value)}
           isRequired={true}
         />
-        <Button text="Criar card" />
+        <Button>Criar card</Button>
       </form>
     </section>
   );
 }
-
-export default CollaboratorForm;

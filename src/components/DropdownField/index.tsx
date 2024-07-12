@@ -1,5 +1,5 @@
 import { ChangeEvent } from "react";
-import "./DropdownField.css";
+import S from "./DropdownField.module.css";
 
 interface IDropdownFieldProps {
   label: string;
@@ -9,7 +9,7 @@ interface IDropdownFieldProps {
   isRequired?: boolean;
 }
 
-function DropdownField({
+export default function DropdownField({
   label,
   items,
   selectedValue,
@@ -21,7 +21,7 @@ function DropdownField({
   };
 
   return (
-    <div className="dropdown-field">
+    <div className={S["dropdown-field"]}>
       <label htmlFor="">{label}</label>
       <select
         name=""
@@ -38,5 +38,3 @@ function DropdownField({
     </div>
   );
 }
-
-export default DropdownField;

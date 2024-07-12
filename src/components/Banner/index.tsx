@@ -1,11 +1,14 @@
-import "./Banner.css";
+import S from "./Banner.module.css";
+import logo from "/images/banner.png";
 
-function Banner() {
+// Files in the public directory are served at the root path.
+// Instead of /public/images/banner.png, use /images/banner.png.
+// import logo from "../../../public/images/banner.png";
+
+export default function Banner() {
   return (
-    <header className="banner">
-      <img src="./images/banner.png" alt="Banner da página Organo" />
+    <header className={S.banner}>
+      <img src={logo} alt="Banner da página Organo" />
     </header>
   );
 }
-
-export default Banner;

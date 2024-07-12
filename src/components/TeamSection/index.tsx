@@ -1,8 +1,8 @@
 import { useCollaboratorContext } from "../../hooks";
 import CardTeam from "../CardTeam";
-import "./TeamSection.css";
+import S from "./TeamSection.module.css";
 
-function TeamSection() {
+export default function TeamSection() {
   const { teams, collaborators } = useCollaboratorContext();
 
   return (
@@ -16,16 +16,16 @@ function TeamSection() {
           return (
             <section
               key={team.name}
-              className="team-section"
+              className={S["team-section"]}
               style={{
                 backgroundColor: team.secondaryColor,
               }}
             >
-              <div className="team-section-title">
+              <div className={S["team-section-title"]}>
                 <h3>{team.name}</h3>
                 <hr style={{ backgroundColor: team.primaryColor }} />
               </div>
-              <div className="team-section-card-list">
+              <div className={S["team-section-card-list"]}>
                 {teams.map((collaborator) => (
                   <CardTeam
                     key={collaborator.name}
@@ -43,5 +43,3 @@ function TeamSection() {
     </>
   );
 }
-
-export default TeamSection;

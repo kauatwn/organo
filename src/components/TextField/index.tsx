@@ -1,5 +1,5 @@
 import { ChangeEvent } from "react";
-import "./TextField.css";
+import S from "./TextField.module.css";
 
 interface ITextFieldProps {
   label: string;
@@ -9,7 +9,7 @@ interface ITextFieldProps {
   isRequired?: boolean;
 }
 
-function TextField({
+export default function TextField({
   label,
   placeholder,
   selectedValue,
@@ -21,7 +21,7 @@ function TextField({
   };
 
   return (
-    <div className="text-field">
+    <div className={S["text-field"]}>
       <label htmlFor="">{label}</label>
       <input
         type="text"
@@ -33,5 +33,3 @@ function TextField({
     </div>
   );
 }
-
-export default TextField;

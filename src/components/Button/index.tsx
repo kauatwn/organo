@@ -1,11 +1,10 @@
-import "./Button.css";
+import S from "./Button.module.css";
 
 interface IButtonProps {
-  text: string;
+  text?: string;
+  children?: React.ReactNode;
 }
 
-function Button({ text }: IButtonProps) {
-  return <button className="btn">{text}</button>;
+export default function Button({ text, children }: IButtonProps) {
+  return <button className={S.btn}>{text ? text : children}</button>;
 }
-
-export default Button;
