@@ -1,19 +1,12 @@
 import "./CollaboratorForm.css";
-import { ICollaborator, ITeam } from "../../interfaces";
 import { useState } from "react";
 import TextField from "../TextField";
 import DropdownField from "../DropdownField";
 import Button from "../Button";
+import { useCollaboratorContext } from "../../hooks";
 
-interface ICollaboratorFormProps {
-  teams: ITeam[];
-  onCollaboratorSubmit: (collaborator: ICollaborator) => void;
-}
-
-function CollaboratorForm({
-  teams,
-  onCollaboratorSubmit,
-}: ICollaboratorFormProps) {
+function CollaboratorForm() {
+  const { teams, onCollaboratorSubmit } = useCollaboratorContext();
   const [name, setName] = useState<string>("");
   const [image, setImage] = useState<string>("");
   const [position, setPosition] = useState<string>("");
