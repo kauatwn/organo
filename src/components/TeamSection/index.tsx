@@ -1,13 +1,10 @@
-import { ITeam, ICollaborator } from "../../interfaces";
+import { useCollaboratorContext } from "../../hooks";
 import CardTeam from "../CardTeam";
 import "./TeamSection.css";
 
-interface ITeamSectionProps {
-  teams: ITeam[];
-  collaborators: ICollaborator[];
-}
+function TeamSection() {
+  const { teams, collaborators } = useCollaboratorContext();
 
-function TeamSection({ teams, collaborators }: ITeamSectionProps) {
   return (
     <>
       {teams.map((team) => {
